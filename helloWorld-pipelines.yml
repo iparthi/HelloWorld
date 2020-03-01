@@ -19,6 +19,15 @@ steps:
   displayName: 'Run a multi-line script'
 
 - task: MSBuild@1
+  displayName: 'Build helloworld app'
   inputs:
     solution: '**/*.sln'
     msbuildArchitecture: 'x64'
+
+- task: CmdLine@2
+  displayName: 'Run helloworld app'
+  inputs:
+    script: 'Helloworld.exe'
+    workingDirectory: './bin/Debug'
+    failOnStderr: true
+    
