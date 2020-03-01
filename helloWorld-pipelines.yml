@@ -24,6 +24,9 @@ steps:
     solution: '**/*.sln'
     msbuildArchitecture: 'x64'
 
-- publish: $(System.DefaultWorkingDirectory)/bin/HelloWorldArtifact
+- script: mkdir $(System.DefaultWorkingDirectory)/HelloWorld/HelloWorldArtifact
+  displayName: 'Make folder Artifact'
+
+- publish: $(System.DefaultWorkingDirectory)/HelloWorld/HelloWorldArtifact
   artifact: HelloWorldArtifact
     
