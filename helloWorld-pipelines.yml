@@ -28,6 +28,6 @@ steps:
   displayName: 'Run helloworld app'
   inputs:
     script: 'Helloworld.exe'
-    workingDirectory: './bin/Debug'
+    workingDirectory: './Helloworld/bin/Debug'
     failOnStderr: true
     
