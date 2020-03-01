@@ -28,6 +28,6 @@ steps:
   displayName: 'Run helloworld app'
   inputs:
     script: 'Helloworld.exe'
-    workingDirectory: './Helloworld/bin/Debug'
+    workingDirectory: $(Agent.BuildDirectory)
     failOnStderr: true
     
