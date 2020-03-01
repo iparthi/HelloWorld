@@ -24,10 +24,6 @@ steps:
     solution: '**/*.sln'
     msbuildArchitecture: 'x64'
 
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: './HelloWorld/bin/Debug/'
-    ArtifactName: 'HelloWorldArtifact'
-    publishLocation: 'FilePath'
-    TargetPath: '\\ussltc9343v.prod.sltc.com\EFT_DataFiles\build'
+- publish: $(System.DefaultWorkingDirectory)/bin/HelloWorldArtifact
+  artifact: HelloWorldArtifact
     
