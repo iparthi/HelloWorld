@@ -27,7 +27,7 @@ steps:
 - task: CmdLine@2
   displayName: 'Run helloworld app'
   inputs:
-    script: 'HelloWorld'
+    script: 'sudo HelloWorld'
     workingDirectory: './HelloWorld/bin/Debug/'
     failOnStderr: true
     
