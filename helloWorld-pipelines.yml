@@ -24,10 +24,10 @@ steps:
     solution: '**/*.sln'
     msbuildArchitecture: 'x64'
 
-- task: CmdLine@2
-  displayName: 'Run helloworld app'
+- task: PublishBuildArtifacts@1
   inputs:
-    script: 'mono HelloWorld.exe'
-    workingDirectory: './HelloWorld/bin/Debug/'
-    failOnStderr: true
+    PathtoPublish: '\\ussltc9343v.prod.sltc.com\EFT_DataFiles\build'
+    ArtifactName: 'HelloWorldArtifact'
+    publishLocation: 'FilePath'
+    TargetPath: '\\ussltc9343v.prod.sltc.com\EFT_DataFiles\build'
     
